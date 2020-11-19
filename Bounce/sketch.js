@@ -1,22 +1,30 @@
-let cx = 0;
-let hastighed = 4;
-let diameter = 50;
-let a=[10,20,30,50,60,70,80,90,100]
-
 function setup() {
-    createCanvas(600, 600);
-
-}
-
-function draw() {
+    createCanvas(800, 800);
+  }
+  let d = Math.floor(Math.random()*101)+51;
+  let x = Math.floor(Math.random()*((801-d)-1)+d/2);
+  let y = Math.floor(Math.random()*((801-d)-1)+d/2);
+  let xSpeed = Math.floor(Math.random()*10)+4;
+  let ySpeed = Math.floor(Math.random()*10)+4;
+   
+  let rød = Math.floor(Math.random()*256);
+  let grøn = Math.floor(Math.random()*256);
+  let blå = Math.floor(Math.random()*256);
+   
+  var bold = ["bold1","bold2","bold3","bold4"];
+   
+  function draw() {
     background(220);
-    circle(cx, 300, diameter);
-
-    if (cx > width - diameter / 2) {
-        position = -hastighed
+    
+    circle(x,y,d);
+    fill(rød,grøn,blå);
+    if(x>width-d/2||x<0+d/2){
+      xSpeed=-xSpeed;
     }
-    if (cx < 0 + diameter / 2) {
-        position = hastighed
+    if(y>height-d/2||y<0+d/2){
+      ySpeed=-ySpeed;
     }
-    cx = cx + position
-}
+    x=x+xSpeed;
+    y=y+ySpeed;
+  }
+  
