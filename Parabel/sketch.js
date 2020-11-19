@@ -11,7 +11,7 @@ function draw() {
   line(20, 20, 300, mouseY);
   line(width - 20, 20, 300, mouseY);
 
-  let n = map(mouseX, 20, width, 2, 10);
+  let n = map(mouseX, 20, width/2, 2, 10);
   n = round(n)
 
   for (let i = 0; i <= n; i++) {
