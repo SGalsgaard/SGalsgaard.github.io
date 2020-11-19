@@ -12,5 +12,4 @@ function draw() {
   line(580, 20, width/2, mouseY)
 
   let n = map(mouseX, 20, width, 2, 10, true);
-  n = round(n)
 }
