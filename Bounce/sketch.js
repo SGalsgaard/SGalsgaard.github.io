@@ -40,4 +40,10 @@ class RandomBall {
   render() {
     circle(this.x, this.y, this.d)
   }
+
+  Collide() {
+    for (let i = this.d + 1; i < balls; i++)
+    
+  }
+    
 }
